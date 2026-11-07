@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171916"><title>DEAD//STAT — Аналитика Deadlock</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body><div class="grain"></div><div class="app-shell">
+<header class="topbar">
+  <a class="brand" href="#" aria-label="На главную"><span>DEAD</span><i>//</i><b>STAT</b><sup>001</sup></a>
+  <div class="system"><span class="pulse"></span> СИСТЕМА АКТИВНА <small>ВЕР. 01.26</small></div>
+</header>
+<main>
+<section class="hero-head"><div class="eyebrow"><span>АНАЛИТИЧЕСКАЯ СИСТЕМА DEADLOCK</span><span>БАЗА ИГРОКОВ / 001</span></div>
+  <div class="hero-title-wrap"><h1>ИЗУЧИ<br><em>ПРОТИВНИКА.</em></h1><div class="hero-stamp"><span>ДОСЬЕ ИГРОКА</span><strong>№ 001</strong><span>ПОЛЕВОЙ ОТЧЁТ</span></div></div>
+  <p class="hero-sub">СТАТИСТИКА ИГРОКА // ИСТОРИЯ МАТЧЕЙ // БОЕВЫЕ ПОКАЗАТЕЛИ</p>
+</section>
+<section class="search-panel"><div class="section-label"><span>01 / ПОИСК ИГРОКА</span><span>ИДЕНТИФИКАЦИЯ STEAM</span></div>
+<form id="searchForm" class="search-form"><label for="steamId">ВВЕДИТЕ STEAM ID ИЛИ ИМЯ ИГРОКА</label><div class="search-line">
+<input id="steamId" type="text" value="1479122548" placeholder="Steam ID / Имя игрока" autocomplete="off"><button type="submit">НАЙТИ ИГРОКА <span>↗</span></button></div>
+<p class="hint">ЗАГРУЖЕН ДЕМО-ПРОФИЛЬ · ИСПОЛЬЗУЮТСЯ ТЕСТОВЫЕ ДАННЫЕ</p></form></section>
+<nav class="tab-nav" aria-label="Разделы сайта">
+<button class="tab-button active" data-tab="profile">01 / ПРОФИЛЬ</button>
+<button class="tab-button" data-tab="analytics">02 / АНАЛИТИКА</button>
+<button class="tab-button" data-tab="heroes">03 / ГЕРОИ</button>
+<button class="tab-button" data-tab="matches">04 / МАТЧИ</button>
+</nav>
+
+<section class="tab-page active" id="profile">
+<div class="section-label"><span>02 / ДОСЬЕ ИГРОКА</span><span class="live-tag">● ПРОФИЛЬ АКТИВЕН</span></div>
+<div class="profile-card torn"><div class="avatar-mark">D<span>★</span></div><div class="profile-info">
+<div class="profile-kicker">ОБЪЕКТ ИДЕНТИФИЦИРОВАН / ID 1479122548</div><h2>SH PUNDIKKID</h2>
+<div class="profile-meta"><span>STEAM ID: 1479122548</span><span>РЕГИОН: НЕИЗВЕСТЕН</span><span>ПОСЛЕДНЯЯ АКТИВНОСТЬ: НЕДАВНО</span></div></div>
+<div class="rank-box"><small>РЕЙТИНГ НАВЫКА</small><strong>6 842</strong><span>▲ +124 ЗА НЕДЕЛЮ</span></div></div>
+<div class="metrics-grid">
+<article class="metric-card accent-card"><span class="metric-index">A / ПОБЕДЫ</span><strong>64.2<span>%</span></strong><label>ДОЛЯ ПОБЕД</label><div class="metric-foot">159 ПОБЕД <i>/////</i></div></article>
+<article class="metric-card"><span class="metric-index">B / АКТИВНОСТЬ</span><strong>248</strong><label>ВСЕГО МАТЧЕЙ</label><div class="metric-foot">ЗАПИСАННЫЕ МАТЧИ <i>/////</i></div></article>
+<article class="metric-card"><span class="metric-index">C / БОЙ</span><strong>3.8</strong><label>СРЕДНИЙ KDA</label><div class="metric-foot">УБИЙСТВА / СМЕРТИ / ПОМОЩЬ <i>/////</i></div></article>
+<article class="metric-card"><span class="metric-index">D / СЕРИЯ</span><strong>05</strong><label>ПОБЕД ПОДРЯД</label><div class="metric-foot">ТЕКУЩАЯ СЕРИЯ <i>/////</i></div></article></div>
+<div class="profile-note panel"><span class="section-label">ЗАМЕТКА АНАЛИТИКА</span><p>Это демонстрационный профиль. Показатели приведены для демонстрации интерфейса и не являются подтверждённой статистикой Steam-аккаунта.</p></div>
+</section>
+
+<section class="tab-page" id="analytics">
+<div class="section-label"><span>03 / АНАЛИТИКА</span><span>ОБЩИЕ ПОКАЗАТЕЛИ</span></div>
+<div class="content-grid">
+<article class="panel performance-panel"><div class="panel-head"><div><span class="section-label">ГРАФИК ПОКАЗАТЕЛЕЙ</span><h3>БОЕВАЯ <em>ДИНАМИКА</em></h3></div><span class="panel-code">РИС. 01</span></div>
+<div class="chart-legend"><span><i class="legend-line"></i> ЭФФЕКТИВНОСТЬ</span><span><i class="legend-dot"></i> МАТЧИ</span><span class="period">ПОСЛЕДНИЕ 10 МАТЧЕЙ</span></div><div class="chart-wrap"><canvas id="performanceChart" aria-label="График игровой эффективности"></canvas></div><div class="chart-axis"><span>МАТЧ 01</span><span>МАТЧ 05</span><span>МАТЧ 10</span></div></article>
+<article class="panel split-panel"><div class="panel-head"><div><span class="section-label">РАЗБОР ПОКАЗАТЕЛЕЙ</span><h3>БОЕВЫЕ <em>ДАННЫЕ</em></h3></div><span class="panel-code">РИС. 02</span></div>
+<div class="data-row"><span>СРЕДНЕЕ ЧИСЛО УБИЙСТВ</span><strong>18.6</strong><div class="bar"><i style="width:76%"></i></div></div>
+<div class="data-row"><span>СРЕДНЕЕ ЧИСЛО СМЕРТЕЙ</span><strong>7.2</strong><div class="bar"><i style="width:32%"></i></div></div>
+<div class="data-row"><span>СРЕДНЕЕ ЧИСЛО ПОМОЩИ</span><strong>8.9</strong><div class="bar"><i style="width:58%"></i></div></div>
+<div class="data-row"><span>СРЕДНЕЕ КОЛИЧЕСТВО ДУШ</span><strong>31.4K</strong><div class="bar"><i style="width:84%"></i></div></div><div class="data-note">* ЗНАЧЕНИЯ ЯВЛЯЮТСЯ ПРИМЕРОМ ДЕМО-ДАННЫХ</div></article></div>
+<div class="panel"><div class="panel-head"><div><span class="section-label">ВЫВОД</span><h3>КРАТКИЙ <em>ОТЧЁТ</em></h3></div></div><p class="report-text">В демонстрационном наборе данных игрок показывает положительный процент побед и стабильные показатели участия в командных столкновениях. Для полноценного анализа необходимо подключить источник реальной статистики и обновлять данные после каждого матча.</p></div>
+</section>
+
+<section class="tab-page" id="heroes">
+<div class="section-label"><span>04 / СПРАВОЧНИК ГЕРОЕВ</span><span>ЛИЧНАЯ ЭФФЕКТИВНОСТЬ</span></div>
+<div class="panel heroes-panel"><div class="panel-head"><div><span class="section-label">ЧАЩЕ ВСЕГО ВЫБИРАЕМЫЕ</span><h3>ЛЮБИМЫЕ <em>ГЕРОИ</em></h3></div><span class="panel-code">ТОП 03</span></div>
+<div class="hero-list">
+<div class="hero-row"><span class="hero-number">01</span><div class="hero-symbol">G</div><div class="hero-name"><strong>ГРЕЙВС</strong><small>ОСНОВНОЙ / 42 МАТЧА</small></div><div class="hero-stat"><strong>68%</strong><small>ПОБЕДЫ</small></div><div class="hero-kda"><strong>4.6</strong><small>KDA</small></div><div class="hero-meter"><i style="width:68%"></i></div></div>
+<div class="hero-row"><span class="hero-number">02</span><div class="hero-symbol purple">V</div><div class="hero-name"><strong>ВЕНАТОР</strong><small>ВТОРОЙ / 31 МАТЧ</small></div><div class="hero-stat"><strong>61%</strong><small>ПОБЕДЫ</small></div><div class="hero-kda"><strong>3.9</strong><small>KDA</small></div><div class="hero-meter"><i style="width:61%"></i></div></div>
+<div class="hero-row"><span class="hero-number">03</span><div class="hero-symbol red">C</div><div class="hero-name"><strong>СЕЛЕСТА</strong><small>НЕДАВНО / 18 МАТЧЕЙ</small></div><div class="hero-stat"><strong>56%</strong><small>ПОБЕДЫ</small></div><div class="hero-kda"><strong>3.2</strong><small>KDA</small></div><div class="hero-meter"><i style="width:56%"></i></div></div></div></div>
+<div class="panel"><span class="section-label">ПРИМЕЧАНИЕ</span><p class="report-text">Раздел показывает пример сравнения героев по числу матчей, проценту побед и среднему KDA. Названия и показатели в этой версии служат демонстрационными данными.</p></div>
+</section>
+
+<section class="tab-page" id="matches">
+<div class="section-label"><span>05 / АРХИВ МАТЧЕЙ</span><span>ПОСЛЕДНИЕ ОПЕРАЦИИ</span></div>
+<div class="panel matches-panel"><div class="panel-head"><div><span class="section-label">ИСТОРИЯ ИГР</span><h3>ПОСЛЕДНИЕ <em>МАТЧИ</em></h3></div><span class="panel-code">ПОСЛЕДНИЕ 05</span></div>
+<div class="table-scroll"><table><thead><tr><th>РЕЗУЛЬТАТ</th><th>ГЕРОЙ</th><th>У / С / П</th><th>ДУШИ</th><th>ВРЕМЯ</th><th>ДАТА</th></tr></thead><tbody>
+<tr><td><b class="win">ПОБЕДА</b></td><td>ГРЕЙВС</td><td>24 / 6 / 11</td><td>42 850</td><td>38:24</td><td>06 НОЯ</td></tr>
+<tr><td><b class="loss">ПОРАЖЕНИЕ</b></td><td>ВЕНАТОР</td><td>13 / 9 / 7</td><td>31 200</td><td>32:08</td><td>06 НОЯ</td></tr>
+<tr><td><b class="win">ПОБЕДА</b></td><td>СЕЛЕСТА</td><td>19 / 5 / 14</td><td>39 640</td><td>41:17</td><td>05 НОЯ</td></tr>
+<tr><td><b class="win">ПОБЕДА</b></td><td>ГРЕЙВС</td><td>21 / 8 / 9</td><td>36 910</td><td>35:42</td><td>05 НОЯ</td></tr>
+<tr><td><b class="loss">ПОРАЖЕНИЕ</b></td><td>ВЕНАТОР</td><td>11 / 12 / 10</td><td>28 430</td><td>29:51</td><td>04 НОЯ</td></tr>
+</tbody></table></div><div class="archive-foot"><span>КОНЕЦ ДОСТУПНЫХ ЗАПИСЕЙ</span><span>НАБОР ДАННЫХ / ДЕМО_001</span></div></div>
+</section>
+<footer class="footer"><div class="brand footer-brand"><span>DEAD</span><i>//</i><b>STAT</b><sup>001</sup></div><p>НЕОФИЦИАЛЬНЫЙ ПРОЕКТ АНАЛИТИКИ DEADLOCK<br>НЕ СВЯЗАН С VALVE CORPORATION.</p><span class="footer-coord">АНАЛИТИЧЕСКИЙ ПРОЕКТ / 2026</span></footer>
+</main></div><script src="app.js"></script></body></html>
